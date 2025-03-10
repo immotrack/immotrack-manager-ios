@@ -16,20 +16,23 @@
 
 import UIKit
 
-class StartViewController: UIViewController, UITextFieldDelegate {
-    
+class StartViewController: UIViewController {
+
+    var serverURL = "https://app.immotrack.online/"
+
     @IBOutlet weak var serverField: UITextField!
     @IBOutlet weak var startButton: UIButton!
-    
+
     @IBAction func onStart(_ sender: AnyObject) {
         startButton.isEnabled = false
 
-        var urlString = serverField.text!
+        var urlString = serverURL
+
         if !urlString.hasSuffix("/") {
             urlString += "/"
         }
         urlString += "api/server"
-        
+
         if let url = URL(string: urlString) {
             let task = URLSession.shared.dataTask(with: url) { data, response, error in
                 if error == nil {
@@ -56,16 +59,20 @@ class StartViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidLoad() {
-        serverField.delegate = self
+        super.viewDidLoad()
+        // Remove UI elements
+        serverField.isHidden = true
+        startButton.isHidden = true
+        onStart(self)
     }
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
 
     func onSuccess() {
-        UserDefaults.standard.set(serverField.text, forKey: "url")
+        UserDefaults.standard.set(serverURL, forKey: "url")
         performSegue(withIdentifier: "StartSegue", sender: self)
     }
     

@@ -293,7 +293,7 @@
 				);
 				MARKETING_VERSION = 4.1;
 				OTHER_SWIFT_FLAGS = "-D FIREBASE";
-				PRODUCT_BUNDLE_IDENTIFIER = org.traccar.TraccarManager;
+				PRODUCT_BUNDLE_IDENTIFIER = online.immotrack.client;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
@@ -424,7 +424,7 @@
 				);
 				MARKETING_VERSION = 4.1;
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = org.traccar.TraccarManager;
+				PRODUCT_BUNDLE_IDENTIFIER = online.immotrack.client;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -449,7 +449,7 @@
 				);
 				MARKETING_VERSION = 4.1;
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = org.traccar.TraccarManager;
+				PRODUCT_BUNDLE_IDENTIFIER = online.immotrack.client;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
